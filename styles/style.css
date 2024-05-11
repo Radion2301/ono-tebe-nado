@@ -37,6 +37,10 @@
     width: 140px;
     margin-left: -115px;
 }
+.header_address {
+    justify-self: end;
+    font-style: inherit;
+}
 .address {
     font-style: inherit;
 }  
