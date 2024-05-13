@@ -148,7 +148,7 @@
     gap: 25px;
     list-style: none;
 }
-.card_link {
+.card__link-list {
     display: block;
     height: 100%;
     text-decoration: none;
@@ -161,7 +161,6 @@
     gap: 30px;
     width: auto;
     height: 100%;
-    max-height: 560px;
     min-height: 560px;
     padding: 50px 40px;
     background-repeat: no-repeat;
@@ -175,6 +174,9 @@
 }
 .card_picture {
     background-image: url(../images/card-lot-03.jpg);
+}
+.card_link{
+    text-decoration: none;
 }
 .card_title,.card_text {
     position: relative;
@@ -191,6 +193,7 @@
 .card_text {
     font-size: 20px;
     line-height: 1.2;
+    text-decoration: none;
 }
 .lots_look_more_link {
     display: block;
@@ -213,16 +216,27 @@
   grid-column: 2/4;
 }
 .auction_logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  background-color: #000000;
+    margin: 0 auto;
+    width: 240px;
+    height: 240px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
 }
-.auction_logo_image {
-  width: 148px;
+.auction_logo::before {
+    content: "";
+    width: 148px;
+    height: 114px;
+    background-image: url(../images/logo-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 63px;
+    left: 43px;
+    z-index: 1;
 }
 .auction_title {
   padding: 100px 0 60px;
@@ -250,7 +264,7 @@
     width: auto;
     height: 48px;
 }
-  .footer_menu_list {
+.footer_menu_list {
     text-align: center;
     list-style: none;
 }
@@ -266,4 +280,4 @@
     display: flex;
     gap: 48px;
     list-style: none;
-  }  
+}  
