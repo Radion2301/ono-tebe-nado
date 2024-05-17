@@ -16,26 +16,24 @@
 .header_list_links {
     display: flex;
     gap: 32px;
-}  
+}
 .header_list_links_item {
     list-style: circle;
 }
 .header_list_links_item_no-bullit {
     list-style: none;
 }
-.header_list_active {
+.header__link_active {
     text-decoration: none;
 }
-.header_list {
+.header__link {
     font-size: 18px;
     white-space: nowrap;
 }
-.header_logo {
-    display: block;
-    justify-self: center;
-    align-self: center;
-    width: 140px;
-    margin-left: -115px;
+.header__logo-image {
+    margin-left: 10%;
+    width: 148px;
+    height: 105px;
 }
 .header_address {
     justify-self: end;
@@ -43,15 +41,16 @@
 }
 .address {
     font-style: inherit;
-}  
-.address_item,.address_map {
+}
+.address_item,
+.address_map {
     display: block;
     font-size: 18px;
     line-height: 1.35;
 }
 .address_map {
     text-decoration: none;
-} 
+}
 .address_item {
     text-underline-position: under;
 }
@@ -78,7 +77,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    color: #FFF;
+    color: #fff;
     font-weight: bold;
     font-size: 100px;
     line-height: 1.15;
@@ -95,32 +94,32 @@
     padding: 136px 0 0;
 }
 .cover_description_text {
-    color: #FFF;
+    color: #fff;
     font-size: 22px;
     line-height: 1.27;
     text-transform: uppercase;
     word-spacing: 18px;
-} 
+}
 .aligned_text {
     display: block;
-} 
+}
 .aligned_text_center {
     line-height: 1;
     text-align: center;
-} 
+}
 .aligned_text_right {
     line-height: 1;
     text-align: right;
     margin-left: 585px;
-} 
+}
 .letter_spacing_extended {
     letter-spacing: 60px;
 }
 .bet_button {
-    border: 1px #FFF solid;
+    border: 1px #fff solid;
     padding: 14px 32px;
-    color: #FFF;
-    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
     font-weight: normal;
     font-size: 22px;
     line-height: 1;
@@ -130,7 +129,7 @@
 }
 .bet_button:hover {
     color: #000000;
-    background-color: #FFF;
+    background-color: #fff;
 }
 .lots {
     padding: 0 25px;
@@ -158,14 +157,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 30px;
     width: auto;
     height: 100%;
     min-height: 560px;
     padding: 50px 40px;
-    background-repeat: no-repeat;
     background-size: cover;
-} 
+    background-position: center;
+}
 .card_film {
     background-image: url(../images/card-lot-01.jpg);
 }
@@ -175,13 +173,14 @@
 .card_picture {
     background-image: url(../images/card-lot-03.jpg);
 }
-.card_link{
+.card_link {
     text-decoration: none;
 }
-.card_title,.card_text {
+.card_title,
+.card_text {
     position: relative;
     z-index: 1;
-    color: #FFF;
+    color: #fff;
 }
 .card_title {
     font-weight: bold;
@@ -204,56 +203,53 @@
     width: fit-content;
 }
 .auction {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 24px;
-  padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 24px;
+    padding: 0 20px;
 }
 .auction_column {
-  justify-self: center;
+    justify-self: center;
 }
 .auction_column_text {
-  grid-column: 2/4;
+    grid-column: 2/4;
 }
+.auction_column-logo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: center;
+}
+
 .auction_logo {
-    margin: 0 auto;
+    background-color: #000;
     width: 240px;
     height: 240px;
-    background-color: #000;
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    position: relative;
-    z-index: 1;
+    align-items: center;
 }
-.auction_logo::before {
-    content: "";
+
+.auction_logo-image {
     width: 148px;
     height: 114px;
-    background-image: url(../images/logo-white.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    top: 63px;
-    left: 43px;
-    z-index: 1;
 }
 .auction_title {
-  padding: 100px 0 60px;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 1;
-  text-transform: uppercase;
+    padding: 100px 0 60px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1;
+    text-transform: uppercase;
 }
 .auction_text {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 45px;
 }
 .auction_text p {
-  font-size: 20px;
-  line-height: normal;
+    font-size: 20px;
+    line-height: normal;
 }
 .footer {
     display: flex;
@@ -280,4 +276,4 @@
     display: flex;
     gap: 48px;
     list-style: none;
-}  
+}
